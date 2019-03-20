@@ -1,6 +1,6 @@
 #### Gradle3.0自动化项目构建技术
 
-> DSL：domain-specific language
+> <font color="de86">DSL：domain-specific language
 - [x] groovy
     - 变量、gstring、循环等基本语法
     - 数据结构：列表，映射，范围
@@ -29,3 +29,10 @@
     - 写法上：没有java那么多限制
     - 功能上：兼容java所有功能以及自己特有的方法，对java极大的扩展
     - 作用上：既可以编写应用，也可编写脚本，实际开发中，编写脚本要多很多
+
+---
+><font color="ed58">Gradle，远不止一个构建工具，看成是一个构建框架最好
+- [x] gradle 组成
+- groovy核心语法
+- build script block
+- gradle api
