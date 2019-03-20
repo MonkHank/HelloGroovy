@@ -1,12 +1,13 @@
 #### Gradle3.0自动化项目构建技术
 
-- DSL：domain-specific language
+> DSL：domain-specific language
 - [x] groovy
     - 变量、gstring、循环等基本语法
     - 数据结构：列表，映射，范围
     - 闭包(核心)
     - 面向对象
 
+---
 - [x] groovy高级用法
     - groovy json操作详解
     - groovy xml文件操作
@@ -21,6 +22,7 @@
     - 所有java能处理的，都能处理的
     - 特有操作
 
+---
 - [x] 侧重点是写脚本，还有一些高级用法例如连接数据库什么的，这里就不讲解了
 
 - groovy与java对比
