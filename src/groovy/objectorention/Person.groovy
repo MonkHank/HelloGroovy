@@ -6,7 +6,8 @@ package groovy.objectorention
  * @author monk
  * @date 2019-03-19.
  */
-class Person   {
+class Person implements Serializable{
+
     String name
     Integer age
 

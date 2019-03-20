@@ -1,6 +1,5 @@
 package groovy.file
 
-import com.google.gson.Gson
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 import groovy.objectorention.Person
