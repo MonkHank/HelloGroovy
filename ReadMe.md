@@ -1,6 +1,6 @@
 # Gradle3.0自动化项目构建技术
 
-### DSL：domain-specific language
+### DSL：domain-specific language，领域特定语言
 - [x] groovy
     - 变量、gstring、循环等基本语法
     - 数据结构：列表，映射，范围
@@ -129,3 +129,28 @@ apply from: this.file('common.gradle')
 
 4. 传递依赖最好不要开
    ![](/png/transitive.png)
+
+### Task
+- 定义及配置
+- 执行详解
+- 依赖和执行顺序
+- 类型
+- 挂接到构建生命周期
+
+---
+1. 定义和配置 [RecordOwn](https://github.com/MonkHank/RecordOwn)
+```
+// 直接通过task函数去创建，推荐这种方式
+task helloTask(group: 'imooc', description: 'task study') {
+    println 'i am helloTask.'
+    // 第一种方式指定执行阶段
+    doFirst {
+        println "the task group is ${group}"
+    }
+    doFirst {}
+}
+```
+2. 依赖 [RecordOwn](https://github.com/MonkHank/RecordOwn)
+
+3. 输入/输出  [RecordOwn](https://github.com/MonkHank/RecordOwn)
+![](/png/taskinputoutput.png)
