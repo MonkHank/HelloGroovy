@@ -1,6 +1,6 @@
-#### Gradle3.0自动化项目构建技术
+# Gradle3.0自动化项目构建技术
 
-> DSL：domain-specific language
+### DSL：domain-specific language
 - [x] groovy
     - 变量、gstring、循环等基本语法
     - 数据结构：列表，映射，范围
@@ -30,8 +30,7 @@
     - 功能上：兼容java所有功能以及自己特有的方法，对java极大的扩展
     - 作用上：既可以编写应用，也可编写脚本，实际开发中，编写脚本要多很多
 
----
->Gradle，远不止一个构建工具，看成是一个构建框架最好
+### Gradle，远不止一个构建工具，看成是一个构建框架最好
 - [x] gradle 组成
 - groovy核心语法
 - build script block
@@ -52,3 +51,81 @@
     - Execution执行阶段，执行具体的task及其依赖task
 3. gradle生命周期监听
 ![](/png/build命令图解.png)
+
+---
+- [x] **Project，gradle API的入口**
+1. Project核心API
+2. gradlew projects 命令，输入当前所有gradle的project
+3. 一个子Project对应一个输出
+
+4. Project API
+
+![](/png/projectAPI.png)
+
+- project 部分API讲解
+```groovy
+// 1. 获取全部 projects
+this.getAllprojects().eachWithIndex { Project entry, int index ->
+//        if (index == 0) {
+//            println "Root project: ${project.name}"
+//        }else {
+//            println "+---Root project: ${project.name}"
+//        }
+    println "+---Root project: ${project.name}"
+}
+
+// 2. 获取子project
+this.getSubprojects()
+
+// 3. 获取父project
+def getParentProjects(){
+    def name= this.getParent().name
+    println "the parent project name is ${name}"
+}
+
+```
+- project 属性讲解
+1. gradle默认所有subproject继承rootproject
+```
+// 1. 获取指定 project，配置子project的gradle，一般不会怎么做
+project('app'){Project project->
+    println project.name
+    apply plugin: 'com.android.application'
+//    group 'com.imooc'
+//    version '1.0.0-release'
+    dependencies {}
+    android{}
+}
+
+// 2. 配置所有project，包括root和subproject
+allprojects {
+    group 'com.imooc'
+    version '1.0.0-release'
+    repositories {
+        google()
+        jcenter()
+    }
+}
+// 3. 不包括当前结点工程，只包括他的subproject
+subprojects { Project project ->
+    // 为所有库工程提供上传maven仓库的功能，publishToMaven.gradle文件还没有
+    if (project.plugins.hasPlugin('com.android.library')) {
+//    apply from: '../publishToMaven.gradle'
+    }
+}
+
+// rootproject引用配置gradle文件，其他subproject继承rootproject，使用common.gradle内部属性，
+// 管理项目配置属性
+apply from: this.file('common.gradle')
+```
+
+- 依赖相关api
+1. compile 所有类或资源都会打包到apk
+2. provide 真正打包时候不会输出到apk，能用到的话就用这个
+   - 编译期间起作用
+   - 被依赖库中已经有相同版本的库，
+3. dependencies{
+   }
+
+4. 传递依赖最好不要开
+   ![](/png/transitive.png)
