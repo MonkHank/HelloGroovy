@@ -138,7 +138,7 @@ apply from: this.file('common.gradle')
 - 挂接到构建生命周期
 
 ---
-1. 定义和配置 [RecordOwn](https://github.com/MonkHank/RecordOwn)
+1. 定义和配置 [RecordOwn](https://github.com/MonkHank/RecordOwn/blob/master/app/build.gradle)
 ```
 // 直接通过task函数去创建，推荐这种方式
 task helloTask(group: 'imooc', description: 'task study') {
@@ -150,7 +150,9 @@ task helloTask(group: 'imooc', description: 'task study') {
     doFirst {}
 }
 ```
-2. 依赖 [RecordOwn](https://github.com/MonkHank/RecordOwn)
+2. 依赖 [RecordOwn](https://github.com/MonkHank/RecordOwn/blob/master/app/build.gradle)
 
-3. 输入/输出  [RecordOwn](https://github.com/MonkHank/RecordOwn)
+3. 输入/输出  [RecordOwn](https://github.com/MonkHank/RecordOwn/blob/master/app/build.gradle)
 ![](/png/taskinputoutput.png)
+
+4. [task类型](https://docs.gradle.org/current/dsl/org.gradle.api.Task.html)
