@@ -156,3 +156,15 @@ task helloTask(group: 'imooc', description: 'task study') {
 ![](/png/taskinputoutput.png)
 
 4. [task类型](https://docs.gradle.org/current/dsl/org.gradle.api.Task.html)
+
+---
+> gradle 其他模块讲解
+- Settings类
+- SourceSet类
+- Plugin讲解
+- Android 插件对gradle扩展
+- 如何迁移到gradle
+
+![](/png/gradle模块.png)
+
+
