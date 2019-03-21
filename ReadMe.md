@@ -157,10 +157,10 @@ task helloTask(group: 'imooc', description: 'task study') {
 
 4. [task类型](https://docs.gradle.org/current/dsl/org.gradle.api.Task.html)
 
----
-> gradle 其他模块讲解
+### gradle 其他模块讲解
 - Settings类
 - SourceSet类
+3. 输入/输出  [RecordOwn](https://github.com/MonkHank/RecordOwn/blob/master/app/build.gradle)
 - Plugin讲解
 - Android 插件对gradle扩展
 - 如何迁移到gradle
