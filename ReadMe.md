@@ -168,3 +168,12 @@ task helloTask(group: 'imooc', description: 'task study') {
 ![](/png/gradle模块.png)
 
 
+### gradle工程迁移和改造
+
+- 也就是ant/maven如何迁移和改造成gradle工程
+- 迁移不多，关键在改造
+
+![](/png/gradle工程迁移和改造.png)
+
+
+
