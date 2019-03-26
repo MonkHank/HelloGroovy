@@ -1,6 +1,6 @@
 # Gradle3.0自动化项目构建技术
 
-### DSL：domain-specific language，领域特定语言
+## DSL：domain-specific language，领域特定语言
 - [x] groovy
     - 变量、gstring、循环等基本语法
     - 数据结构：列表，映射，范围
@@ -30,7 +30,7 @@
     - 功能上：兼容java所有功能以及自己特有的方法，对java极大的扩展
     - 作用上：既可以编写应用，也可编写脚本，实际开发中，编写脚本要多很多
 
-### Gradle，远不止一个构建工具，看成是一个构建框架最好
+## Gradle，远不止一个构建工具，看成是一个构建框架最好
 - [x] gradle 组成
 - groovy核心语法
 - build script block
@@ -130,7 +130,7 @@ apply from: this.file('common.gradle')
 4. 传递依赖最好不要开
    ![](/png/transitive.png)
 
-### Task
+## Task
 - 定义及配置
 - 执行详解
 - 依赖和执行顺序
@@ -157,7 +157,7 @@ task helloTask(group: 'imooc', description: 'task study') {
 
 4. [task类型](https://docs.gradle.org/current/dsl/org.gradle.api.Task.html)
 
-### gradle 其他模块讲解
+## gradle 其他模块讲解
 - Settings类
 - SourceSet类
 3. 输入/输出  [RecordOwn](https://github.com/MonkHank/RecordOwn/blob/master/app/build.gradle)
@@ -168,12 +168,20 @@ task helloTask(group: 'imooc', description: 'task study') {
 ![](/png/gradle模块.png)
 
 
-### gradle工程迁移和改造
+## gradle工程迁移和改造
 
 - 也就是ant/maven如何迁移和改造成gradle工程
 - 迁移不多，关键在改造
 
 ![](/png/gradle工程迁移和改造.png)
+
+---
+## Jenkins介绍
+- 持续集成
+- 使用Jenkins完成持续集成
+
+### Jenkins环境搭建
+![](/png/Jenkins配置.png)
 
 
 
